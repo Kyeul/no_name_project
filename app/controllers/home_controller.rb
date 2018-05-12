@@ -14,7 +14,7 @@ class HomeController < ApplicationController
     @post.content = params[:post_content]
     @post.save
     
-    redirect_to '/home/new'
+    redirect_to :back
   end
   
   def notice

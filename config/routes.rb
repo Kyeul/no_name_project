@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'home/new' => 'home#new'
 
+  get 'home/notice' => 'home#notice'
+
   post 'home/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
