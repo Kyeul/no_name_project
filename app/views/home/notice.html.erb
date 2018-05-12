@@ -104,6 +104,15 @@
          </div>
          <div class="board_content_1">
             <%=@post.content%><br><br>  
+            <%@post.comments.each do |c|%>
+              익명의 X : <%=c.content%> <a href ='comments/delete/<%=c.id%>'><button type="button" class="btn btn-default btn-sm">삭제</button></a><br>
+            <%end%>
+            <br><br>
+            <form action="/home/notice/<%=@post.id%>/create" method=post>
+              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+              <input type='textarea' name='comment' placeholder='댓 글 입 력'>
+              <button type="submit" class='btn btn-outline-primary'>입력</button>
+            </form>
          </div>
          
         </div>    
