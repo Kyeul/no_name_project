@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>Workspace</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    
+    <!--폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+    
+    <meta charset="utf-8">
+    <title>Groovin one page bootstrap template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/stylesheet/fancybox/jquery.fancybox.css">
+    <link href="assets/stylesheet/bootstrap.css" rel="stylesheet" />
+    <link href="assets/stylesheet/bootstrap-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/stylesheet/slippry.css">
+    <link href="assets/stylesheet/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/color/default.css">
+    <!--모달-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   
-  <!--폰트-->
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+  <!--출처: http://scriptmoa.tistory.com/112#comment13069428 [스크립트 모아]-->
+    <!-- =======================================================
+      Theme Name: Groovin
+      Theme URL: https://bootstrapmade.com/groovin-free-bootstrap-theme/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+    <script src="assets/javascript/modernizr.custom.js"></script>
+    
+  </head>
+  <body>
+
+  <%= yield %>
   
-  <meta charset="utf-8">
-  <title>Groovin one page bootstrap template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <!-- styles -->
-  <link rel="stylesheet" href="assets/stylesheet/fancybox/jquery.fancybox.css">
-  <link href="assets/stylesheet/bootstrap.css" rel="stylesheet" />
-  <link href="assets/stylesheet/bootstrap-theme.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/stylesheet/slippry.css">
-  <link href="assets/stylesheet/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/color/default.css">
-  <!--모달-->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-<!--출처: http://scriptmoa.tistory.com/112#comment13069428 [스크립트 모아]-->
-  <!-- =======================================================
-    Theme Name: Groovin
-    Theme URL: https://bootstrapmade.com/groovin-free-bootstrap-theme/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
-  <script src="assets/javascript/modernizr.custom.js"></script>
+    <!-- javascript -->
+    <!--모달 시작-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+    <script src="http://googledrive.com/host/0B-QKv6rUoIcGREtrRTljTlQ3OTg"></script><!-- ie10-viewport-bug-workaround.js --> 
+    <script src="http://googledrive.com/host/0B-QKv6rUoIcGeHd6VV9JczlHUjg"></script><!-- holder.js -->
+    <!--모달 끝-->
+    <script src="assets/javascript/jquery-1.9.1.min.js"></script>
+    <script src="assets/javascript/jquery.easing.js"></script>
+    <script src="assets/javascript/classie.js"></script>
+    <script src="assets/javascript/bootstrap.js"></script>
+    <script src="assets/javascript/slippry.min.js"></script>
+    <script src="assets/javascript/nagging-menu.js"></script>
+    <script src="assets/javascript/jquery.nav.js"></script>
+    <script src="assets/javascript/jquery.scrollTo.js"></script>
+    <script src="assets/javascript/jquery.fancybox.pack.js"></script>
+    <script src="assets/javascript/jquery.fancybox-media.js"></script>
+    <script src="assets/javascript/masonry.pkgd.min.js"></script>
+    <script src="assets/javascript/imagesloaded.js"></script>
+    <script src="assets/javascript/jquery.nicescroll.min.js"></script>
+    <script src="assets/javascript/AnimOnScroll.js"></script>
+    <script>
+      new AnimOnScroll(document.getElementById('grid'), {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.2
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#slippry-slider').slippry(
+          defaults = {
+            transition: 'vertical',
+            useCSS: true,
+            speed: 5000,
+            pause: 3000,
+            initSingle: false,
+            auto: true,
+            preload: 'visible',
+            pager: false,
+          }
   
-</head>
-<body>
-
-<%= yield %>
-
-  <!-- javascript -->
-  <!--모달 시작-->
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
-  <script src="http://googledrive.com/host/0B-QKv6rUoIcGREtrRTljTlQ3OTg"></script><!-- ie10-viewport-bug-workaround.js --> 
-  <script src="http://googledrive.com/host/0B-QKv6rUoIcGeHd6VV9JczlHUjg"></script><!-- holder.js -->
-  <!--모달 끝-->
-  <script src="assets/javascript/jquery-1.9.1.min.js"></script>
-  <script src="assets/javascript/jquery.easing.js"></script>
-  <script src="assets/javascript/classie.js"></script>
-  <script src="assets/javascript/bootstrap.js"></script>
-  <script src="assets/javascript/slippry.min.js"></script>
-  <script src="assets/javascript/nagging-menu.js"></script>
-  <script src="assets/javascript/jquery.nav.js"></script>
-  <script src="assets/javascript/jquery.scrollTo.js"></script>
-  <script src="assets/javascript/jquery.fancybox.pack.js"></script>
-  <script src="assets/javascript/jquery.fancybox-media.js"></script>
-  <script src="assets/javascript/masonry.pkgd.min.js"></script>
-  <script src="assets/javascript/imagesloaded.js"></script>
-  <script src="assets/javascript/jquery.nicescroll.min.js"></script>
-  <script src="assets/javascript/AnimOnScroll.js"></script>
-  <script>
-    new AnimOnScroll(document.getElementById('grid'), {
-      minDuration: 0.4,
-      maxDuration: 0.7,
-      viewportFactor: 0.2
-    });
-  </script>
-  <script>
-    $(document).ready(function() {
-      $('#slippry-slider').slippry(
-        defaults = {
-          transition: 'vertical',
-          useCSS: true,
-          speed: 5000,
-          pause: 3000,
-          initSingle: false,
-          auto: true,
-          preload: 'visible',
-          pager: false,
-        }
-
-      )
-    });
-  </script>
-
-  <script src="assets/javascript/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
-
-
-</body>
+        )
+      });
+    </script>
+  
+    <script src="assets/javascript/custom.js"></script>
+    <script src="contactform/contactform.js"></script>
+  
+  
+  </body>
 </html>

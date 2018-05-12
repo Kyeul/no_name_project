@@ -30,14 +30,23 @@
                       </button> 
                       <h4 class="modal-title" id="myModalLabel">게시글 쓰기</h4> 
                     </div> 
-                    <div class="modal-body">
-                      
-                    </div> 
-                    <div class="modal-footer"> 
-                      <input type="submit" class="btn btn-primary" value="작성" >
-                      <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button> 
-                      
-                    </div> 
+                    <form action='/home/create' method='post'>
+                      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                      <div class="modal-body">
+                        
+                        <!--CRUD-->
+                        
+                          제목: <input type='text' class="btn btn-default" name='post_title'><br><br>
+                          내용: <textarea class="btn btn-default" name='post_content' width='700'></textarea><br>
+                        
+                        
+                        <!--CRUD-->
+                      </div> 
+                      <div class="modal-footer"> 
+                        <input type="submit" class="btn btn-primary" value="작성" >
+                        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button> 
+                      </div> 
+                    </form>
                   </div> 
                 </div> 
               </div> 
