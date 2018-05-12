@@ -4,6 +4,7 @@
 
 html {
     background-image: url(/assets/slide/1);
+    background-repeat: no-repeat;
     
 }
 
@@ -30,7 +31,7 @@ header {
     font-size: 5rem;
     color: white;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     font-family: 'Nanum Pen Script', cursive;
 }
 
@@ -41,10 +42,37 @@ header {
     opacity: 0.7;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    // padding-left: 13rem;
+    // padding-right: 0rem;
+    margin-left: 13rem;
+    margin-right: 13rem;
+    // text-align: left;
+    font-family: 'Nanum Pen Script', cursive;
+    
+}
+.board_content_1{
+    color: white;
+    font-size: 3rem;
+    background-color: rgb(50, 50, 50);
+    opacity: 0.7;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     padding-left: 13rem;
     padding-right: 0rem;
     margin-left: 13rem;
     margin-right: 13rem;
+    margin-bottom: 2rem;
     text-align: left;
     font-family: 'Nanum Pen Script', cursive;
+    
+    height: 400px;
+}
+
+// 내용물
+
+// .notice_board{
+// }
+
+.e_d_button{
+    padding-bottom: 2rem;
 }

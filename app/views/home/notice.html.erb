@@ -1,0 +1,151 @@
+<body>
+  <header>
+
+    <div id="navigation" class="navbar navbar-inverse navbar-fixed-top default" role="navigation">
+      <div class="container">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">익명 게시판</a>
+        </div>
+
+        <div class="navigation">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <nav class="nav navbar-nav navbar-right">
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" > 게시글 글쓰기 </button>
+              <a href="/home/new"><button type="button" class="btn btn-primary btn-lg"> 게시판 가기 </button></a>
+              <!-- 모달 팝업 --> 
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" > 
+                <div class="modal-dialog"> 
+                  <div class="modal-content"> 
+                    <div class="modal-header"> 
+                      <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                      </button> 
+                      <h4 class="modal-title" id="myModalLabel">게시글 쓰기</h4> 
+                    </div> 
+                    <form action='/home/create' method='post'>
+                      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                      <div class="modal-body">
+                        <!--페이지 네이트-->
+                        
+                        
+                        <!--CRUD-->
+                          제목: <input type='text' class="btn btn-default" name='post_title'><br><br>
+                          내용: <textarea class="btn btn-default" name='post_content' width='700'></textarea><br>
+                        <!--CRUD-->
+                      </div> 
+                      <div class="modal-footer"> 
+                        <input type="submit" class="btn btn-primary" value="작성" >
+                        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button> 
+                      </div> 
+                    </form>
+                  </div> 
+                </div> 
+              </div> 
+              
+              <!--<ul class="nav navbar-nav navbar-right">-->
+              <!--  <li class="current"><a href="#intro">Home</a></li>-->
+              <!--  <li><a href="#about">About</a></li>-->
+              <!--  <li><a href="#works">Works</a></li>-->
+              <!--  <li><a href="#contact">Contact</a></li>-->
+              <!--</ul>-->
+            </nav>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+  <section id="intro">
+    <div class="notice_board">
+      <div class="section_back">
+        <div class="new_board">
+        
+           <h1 id="board_name"><%=@post.title%></h1>
+           <div class="e_d_button">
+          <!--모달 수정-->
+           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editModal" > 수정 </button>  
+           <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" > 
+                <div class="modal-dialog"> 
+                  <div class="modal-content"> 
+                    <div class="modal-header"> 
+                      <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                      </button> 
+                      <h4 class="modal-title" id="myModalLabel">게시글 수정</h4> 
+                    </div> 
+                    <form action='/home/update/<%= @post.id%>' method='post'>
+                      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                      <div class="modal-body">
+                          제목: <input type='text' class="btn btn-default" name='post_title' value=<%= @post.title %>><br><br>
+                          내용: <textarea class="btn btn-default" name='post_content' width='700'><%= @post.content %></textarea><br>
+                      </div> 
+                      <div class="modal-footer"> 
+                        <input type="submit" class="btn btn-primary" value="완료" >
+                        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button> 
+                      </div> 
+                    </form>
+                  </div> 
+                </div> 
+              </div> 
+          
+          <!--모달 수정-->
+          <a href="/home/destroy/<%= @post.id%>"><button type="button" class="btn btn-primary btn-lg">삭제</button></a>
+         </div>
+         <div class="board_content_1">
+            <%=@post.content%><br><br>  
+         </div>
+         
+        </div>    
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="verybottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aligncenter">
+              <ul class="social-network social-circle">
+                <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aligncenter">
+              <p>
+                &copy; 멋쟁이 사자처럼
+              </p>
+              <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Groovin
+                -->
+                <a href="https://bootstrapmade.com/">박 결</a> by <a href="https://bootstrapmade.com/">6기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--<a href="#" class="scrollup"><i class="fa fa-angle-up fa-2x"></i></a>-->
+</body>
