@@ -97,13 +97,13 @@
                 </div> 
               </div> 
           
-          <!--모달 수정-->
+          <!--모달 수정 끝-->
           <a href="/home/destroy/<%= @post.id%>"><button type="button" class="btn btn-primary btn-lg">삭제</button></a>
          </div>
          <div class="board_content_1">
             <%=@post.content%><br><br>  
             <%@post.comments.each do |c|%>
-              익명의 X : <%=c.content%> <a href ='comments/delete/<%=c.id%>'><button type="button" class="btn btn-default btn-sm">삭제</button></a><br>
+              익명의 X : <%=c.content%> <a href ='comments/delete/<%=c.id%>'><button type="button" class="btn btn-default btn-sm">삭제</button></a>
             <%end%>
             <br>
             <form action="/home/notice/<%=@post.id%>/create" method=post>
