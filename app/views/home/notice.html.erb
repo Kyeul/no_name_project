@@ -33,13 +33,11 @@
                     <form action='/home/create' method='post'>
                       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                       <div class="modal-body">
-                        <!--페이지 네이트-->
-                        
-                        
-                        <!--CRUD-->
-                          제목: <input type='text' class="btn btn-default" name='post_title'><br><br>
-                          내용: <textarea class="btn btn-default" name='post_content' width='700'></textarea><br>
-                        <!--CRUD-->
+                        <div class='modal_text'>
+                          제목: <input type='text' class="btn btn-default btn-lg" name='post_title' size="40"><br><br>
+                          내용: <textarea class="btn btn-default" name='post_content' size="40"></textarea><br>
+                        </div>
+                      
                       </div> 
                       <div class="modal-footer"> 
                         <input type="submit" class="btn btn-primary" value="작성" >
@@ -87,8 +85,8 @@
                     <form action='/home/update/<%= @post.id%>' method='post'>
                       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                       <div class="modal-body">
-                          제목: <input type='text' class="btn btn-default" name='post_title' value=<%= @post.title %>><br><br>
-                          내용: <textarea class="btn btn-default" name='post_content' width='700'><%= @post.content %></textarea><br>
+                          제목: <input type='text' class="btn btn-default" name='post_title' size="40" value=<%= @post.title %>><br><br>
+                          내용: <textarea class="btn btn-default" name='post_content' size="40"><%= @post.content %></textarea><br>
                       </div> 
                       <div class="modal-footer"> 
                         <input type="submit" class="btn btn-primary" value="완료" >
@@ -107,11 +105,11 @@
             <%@post.comments.each do |c|%>
               익명의 X : <%=c.content%> <a href ='comments/delete/<%=c.id%>'><button type="button" class="btn btn-default btn-sm">삭제</button></a><br>
             <%end%>
-            <br><br>
+            <br>
             <form action="/home/notice/<%=@post.id%>/create" method=post>
               <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-              <input type='textarea' name='comment' placeholder='댓 글 입 력'>
-              <button type="submit" class='btn btn-outline-primary'>입력</button>
+              <input type='textarea' name='comment' size="25" placeholder='댓 글 입 력' style="background-color: #FFFFFF;">
+              <button type="submit" class='btn btn-primary'>입력</button>
             </form>
          </div>
          
